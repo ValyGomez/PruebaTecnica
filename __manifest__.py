@@ -1,21 +1,21 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "heroes",
+    'name': "Superheroes",
 
-    'summary': "Short (1 phrase/line) summary of the module's purpose",
+    'summary': "Módulo de prueba Técnica",
 
     'description': """
-Long description of module's purpose
+Módulo que gestiona información para la prueba técnica de odoo
     """,
 
-    'author': "My Company",
-    'website': "https://www.yourcompany.com",
+    'author': "Valeria Gómez Soriano",
+    'website': "https://www.valeriagomez.com",
 
     # Categories can be used to filter modules in modules listing
     # Check https://github.com/odoo/odoo/blob/15.0/odoo/addons/base/data/ir_module_category_data.xml
     # for the full list
     'category': 'Uncategorized',
-    'version': '0.1',
+    'version': '0.2',
 
     # any module necessary for this one to work correctly
     'depends': ['base'],

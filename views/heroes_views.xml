@@ -1,0 +1,55 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="sala_search_view">
+            <field name="name">heroes.search</field>
+            <field name="model">heroes.heroes</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="nombre" string="Nombre"/>
+                    <field name="apellidos" string="Apellidos"/>
+                    <field name="nombre_superheroe" string="Superheroe"/>
+                </search>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="heroes_tree_view">
+            <field name="name">heroes.tree</field>
+            <field name="model">heroes.heroes</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="nombre"/>
+                    <field name="apellidos"/>
+                    <field name="nombre_completo" />
+                    <field name="nombre_superheroe"/>
+                    <field name="trabajador_parecido"/>
+                </tree>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="heroes_form_view">
+            <field name="name">heroes.form</field>
+            <field name="model">heroes.heroes</field>
+            <field name="arch" type="xml">
+                <form string="Formulario superheroes">
+                    <sheet>
+                        <group>
+                            <field name="nombre"/>
+                            <field name="apellidos"/>
+                            <field name="nombre_completo" readonly="true"/>
+                            <field name="nombre_superheroe"/>
+                            <field name="trabajador_parecido" />
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+         <record model="ir.actions.act_window" id="heroes.heroes_action_window">
+            <field name="name">Superheroes</field>
+            <field name="res_model">heroes.heroes</field>
+            <field name="view_mode">tree,form,search</field>
+        </record>
+
+        <menuitem name="Gestión de Superhéroes" id="heroes.menu_root" action="heroes.heroes_action_window"/>
+
+    </data>
+</odoo>
